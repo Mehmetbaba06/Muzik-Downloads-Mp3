@@ -69,7 +69,7 @@ class Chat:
 
         self.messages = {
             'start':'🙋‍♂️ Merhaba, '+ self.user_name +'!\n\n'
-                    '📩 Bana gönderin:\n\n'
+                    '📩 Gönderin:\n\n'
                     '"*/bul* _şarkı name_"  veya\n'
                     '"*/bul* _müzisyen adı - şarkı adı_"\n\n'
                     'müzik İndirmek için. 🎶',
