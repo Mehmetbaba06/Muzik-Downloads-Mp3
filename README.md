@@ -1,11 +1,11 @@
-# Telegram Music Downloader Bot
-## Description
+# Telegram Müzik İndirici Bot
+## Açıklama 
 <a href="https://telegram.org/">Telegram</a> bot to download mp3 from YouTube.
 
 Click <a href="https://t.me/TLMusicDownloader_bot">@TLMusicDownloader_bot</a> to see.
 
 
-## Install dependencies
+## Bağımlılıkları yükleme 
 
 - Install telepotpro framework
 
@@ -23,7 +23,7 @@ Click <a href="https://t.me/TLMusicDownloader_bot">@TLMusicDownloader_bot</a> to
  
         mv sample.env .env
 
-## Deploy on Heroku
+## Heroku'da Konuşlandır 🚀
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
