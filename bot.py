@@ -75,12 +75,12 @@ class Chat:
                     'müzik İndirmek için. 🎶',
             
             'spotify_input_error':"‼️ *Oops! Bot Spotify bağlantılarını desteklemiyor!*\n"
-                    'Try: "*/bul* _şarkı adı_"\n'
-                    'or: "*/bul* _müzisyen adı - şarkı adı_"',
+                    'Denemek: "*/bul* _şarkı adı_"\n'
+                    'Veya: "*/bul* _müzisyen adı - şarkı adı_"',
 
             'invalid_command':'‼️ *Oops! Geçersiz komut!*\n'
-                    'Try: "*/bul* _şarkı adı_"\n'
-                    'or: "*/bul* _müzisyen adı - şarkı adı_"',
+                    'Denemek: "*/bul* _şarkı adı_"\n'
+                    'Veya: "*/bul* _müzisyen adı - şarkı adı_"',
 
             'too_long':'‼️ *Oops! Video dönüştürülemeyecek kadar uzun!*\n'
                     '30 dakika veya daha az bir şey gönderiniz.'
@@ -115,7 +115,7 @@ class Chat:
         min_duration, split_count = Music.get_duration(self, result)
 
         if int(min_duration) < 30 and split_count < 3:
-            file_name = Music.get_title(self, result) +' - @TLMusicDownloader_bot '+str(randint(0,999999))+'.mp3'
+            file_name = Music.get_title(self, result) +' - @@SohbetDestek '+str(randint(0,999999))+'.mp3'
             file_name = file_name.replace('"', '')
 
             self.send_message(f"🎵 {Music.get_title(self, result)}\n🔗 {Music.get_link(self, result)}")
@@ -138,7 +138,7 @@ class Chat:
         if user_input.startswith('/start'):
             self.send_message(self.messages['start'])
 
-        elif user_input.startswith('/music') and user_input[6:]!='':
+        elif user_input.startswith('/bul') and user_input[6:]!='':
             if 'open.spotify.com' in user_input[6:]:
             	self.send_message(self.messages['spotify_input_error'])
 
