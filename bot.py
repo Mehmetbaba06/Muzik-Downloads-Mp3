@@ -63,7 +63,7 @@ class Chat:
     def __init__(self, msg):
         self.chat_id = msg['chat']['id']
         self.user_input = msg['text']
-        self.user_input = self.user_input.replace('@TLMusicDownloader_bot', '')
+        self.user_input = self.user_input.replace('@SohbetDestek', '')
         self.user_name = msg['from']['first_name']
         self.message_id = msg['message_id']
 
@@ -126,7 +126,7 @@ class Chat:
             try:
                 self.send_audio(file_name)
                 self.delete_message(downloading_message)
-                self.send_message('✅ Sucess!')
+                self.send_message('✅ İndirme Başarılı!')
                 print ("\nSucess!\n")
             except:
                 print("\nError")
